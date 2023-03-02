@@ -1,8 +1,10 @@
 package com.jstevenperry.intro;
 
 public class Person {
-	public Person(String name, int age, int height, int weight, String eyeColor, String gender) {
-		this.name = name;
+	public Person(String firstName, String lastName, int age, int height, int weight, String eyeColor, String gender) {
+//		this.name = name;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
@@ -27,7 +29,7 @@ public class Person {
 		this.age = age;
 	}
 	public int getHeight() {
-		return height;
+		return (gender.equals("MALE")) ? (height + 2) : height;
 	}
 	public void setHeight(int height) {
 		this.height = height;
